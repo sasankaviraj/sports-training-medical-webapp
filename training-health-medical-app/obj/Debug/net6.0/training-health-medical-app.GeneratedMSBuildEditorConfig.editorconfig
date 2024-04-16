@@ -1,0 +1,120 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = training_health_medical_app
+build_property.RootNamespace = training_health_medical_app
+build_property.ProjectDir = C:\Projects\c#\CAMPUS-PROJECTS\training-health-medical-app\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Projects\c#\CAMPUS-PROJECTS\training-health-medical-app
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Areas/Identity/Pages/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Athletes/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXRobGV0ZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Athletes/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXRobGV0ZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Athletes/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXRobGV0ZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Athletes/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXRobGV0ZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Athletes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXRobGV0ZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Diagnoses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlhZ25vc2VzXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Diagnoses/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlhZ25vc2VzXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Diagnoses/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlhZ25vc2VzXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Diagnoses/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlhZ25vc2VzXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Diagnoses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGlhZ25vc2VzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Projects/c\#/CAMPUS-PROJECTS/training-health-medical-app/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fnn8o8c4ij

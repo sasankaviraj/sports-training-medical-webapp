@@ -1,0 +1,50 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    body {
+        background-image: url('https://images.pexels.com/photos/317157/pexels-photo-317157.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'); /* Update with your image path */
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        font-family: 'Arial', sans-serif; /* Specify a font family */
+    }
+
+    .landing-content {
+        background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+        color: #fff; /* Text color */
+        padding: 100px 0; /* Padding for content */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+    }
+
+    .landing-content h1 {
+        font-size: 3.5rem; /* Adjust font size */
+        margin-bottom: 20px; /* Margin bottom for spacing */
+    }
+
+    .landing-content p {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+
+    /* Additional styles for better appearance */
+    .landing-content a {
+        color: #007bff; /* Link color */
+        text-decoration: underline; /* Underline link */
+    }
+
+    .landing-content a:hover {
+        color: #0056b3; /* Hover color */
+        text-decoration: none; /* Remove underline on hover */
+    }
+</style>
+
+<div class="text-center">
+    <div class="landing-content">
+        <h1 class="display-4">Welcome</h1>
+        <p>The Netball Athletes' Training Management</p>
+    </div>
+</div>
