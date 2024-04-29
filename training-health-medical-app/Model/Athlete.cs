@@ -6,6 +6,6 @@
         public string Name { get; set; }
         public string Gender { get; set; }
         public string Sport { get; set; }
-        public string UserID { get; set; }
+        public string? UserID { get; set; }
     }
 }

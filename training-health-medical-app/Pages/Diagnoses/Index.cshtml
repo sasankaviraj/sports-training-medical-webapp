@@ -5,7 +5,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Diagnose Details</h1>
 
 <p>
     <a asp-page="Create">New Diagnose</a>
@@ -28,6 +28,9 @@
         </div>
     }
 </div>
+
+<button id="exportPdf">Export to PDF</button>
+<button id="exportExcel">Export to Excel</button>
 
 <style>
     .chat-container {
@@ -73,3 +76,88 @@
         text-decoration: underline;
     }
 </style>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#exportPdf').on('click', function () {
+                exportData('pdf');
+            });
+
+            $('#exportExcel').on('click', function () {
+                exportData('excel');
+            });
+
+            function exportData(format) {
+                // Gather chat data from the page
+                var chatData = [];
+                $('.chat-bubble').each(function () {
+                    var message = $(this).find('.message').text().trim();
+                    var response = $(this).find('.response').text().trim();
+                    chatData.push([message, response]);
+                });
+
+                if (format === 'pdf') {
+                    exportToPdf(chatData);
+                } else if (format === 'excel') {
+                    exportToExcel(chatData);
+                }
+            }
+
+            function exportToPdf(data) {
+                var docDefinition = {
+                    content: [
+                        { text: 'Chat Data', style: 'header' },
+                        {
+                            table: {
+                                headerRows: 1,
+                                widths: ['*', '*'],
+                                body: [
+                                    ['Message', 'Response'],
+                                    ...data
+                                ]
+                            }
+                        }
+                    ],
+                    styles: {
+                        header: {
+                            fontSize: 18,
+                            bold: true,
+                            margin: [0, 0, 0, 10]
+                        }
+                    }
+                };
+
+                pdfMake.createPdf(docDefinition).download('ChatData.pdf');
+            }
+
+
+            function exportToExcel(data) {
+                var worksheetData = [['Message', 'Response']];
+                data.forEach(function (item) {
+                    worksheetData.push(item);
+                });
+
+                var workbook = XLSX.utils.book_new();
+                var worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
+                XLSX.utils.book_append_sheet(workbook, worksheet, 'ChatData');
+                var excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+                saveAsExcelFile(excelBuffer, 'ChatData.xlsx');
+            }
+
+            function saveAsExcelFile(buffer, fileName) {
+                var blob = new Blob([buffer], { type: 'application/octet-stream' });
+                var link = document.createElement('a');
+                link.href = window.URL.createObjectURL(blob);
+                link.download = fileName;
+                link.click();
+            }
+        });
+    </script>
+}

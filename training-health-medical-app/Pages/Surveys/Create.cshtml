@@ -1,0 +1,76 @@
+﻿@page
+@model training_health_medical_app.Pages.Surveys.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Survey</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Survey.Mood" class="control-label">How would you describe your current mood</label>
+                <input asp-for="Survey.Mood" class="form-control" />
+                <span asp-validation-for="Survey.Mood" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Survey.Appetite" class="control-label">Have you experienced any significant changes in your appetite recently (increase or decrease)?</label>
+                <input asp-for="Survey.Appetite" class="form-control" />
+                <span asp-validation-for="Survey.Appetite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Survey.Feelings" class="control-label">Are you experiencing feelings of sadness or hopelessness that persist over time?</label>
+                <input asp-for="Survey.Feelings" class="form-control" />
+                <span asp-validation-for="Survey.Feelings" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Survey.Interest" class="control-label">Have you experienced a loss of interest in activities that once brought you pleasure?</label>
+                <input asp-for="Survey.Interest" class="form-control" />
+                <span asp-validation-for="Survey.Interest" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Survey.Sleep" class="control-label">Have you noticed a change in your sleep patterns, such as difficulty falling asleep or waking up frequently during the night?</label>
+                <input asp-for="Survey.Sleep" class="form-control" />
+                <span asp-validation-for="Survey.Sleep" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Survey.PhysicalSymptom" class="control-label">Are you experiencing physical symptoms such as headaches or stomachaches without a clear medical cause?</label>
+                <input asp-for="Survey.PhysicalSymptom" class="form-control" />
+                <span asp-validation-for="Survey.PhysicalSymptom" class="text-danger"></span>
+            </div>
+@*            <div class="form-group">
+                <label asp-for="Survey.Treatment" class="control-label"></label>
+                <input asp-for="Survey.Treatment" class="form-control" />
+                <span asp-validation-for="Survey.Treatment" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="Survey.PlayerID" class="control-label">Player Name</label>
+                <select asp-for="Survey.PlayerID" class="form-control" asp-items="@(new SelectList(Model.Players, "ID", "Name"))">
+                    <option value="">-- Select Player --</option>
+                </select>
+                <span asp-validation-for="Survey.PlayerID" class="text-danger"></span>
+            </div>
+@*            <div class="form-group">
+                <label asp-for="Survey.CoachID" class="control-label"></label>
+                <input asp-for="Survey.CoachID" class="form-control" />
+                <span asp-validation-for="Survey.CoachID" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

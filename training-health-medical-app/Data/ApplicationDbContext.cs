@@ -18,5 +18,9 @@ namespace training_health_medical_app.Data
         }
 
         public DbSet<training_health_medical_app.Model.Diagnosis>? Diagnosis { get; set; }
+
+        public DbSet<training_health_medical_app.Model.Coach>? Coach { get; set; }
+
+        public DbSet<training_health_medical_app.Model.Survey>? Survey { get; set; }
     }
 }

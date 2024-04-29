@@ -1,0 +1,50 @@
+﻿@page
+@model training_health_medical_app.Pages.Coaches.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Coach</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Coach.Name" class="control-label"></label>
+                <input asp-for="Coach.Name" class="form-control" />
+                <span asp-validation-for="Coach.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Coach.Gender" class="control-label"></label>
+                <input asp-for="Coach.Gender" class="form-control" />
+                <span asp-validation-for="Coach.Gender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Coach.Sport" class="control-label"></label>
+                <input asp-for="Coach.Sport" class="form-control" />
+                <span asp-validation-for="Coach.Sport" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+             @if (Model.CoachExists)
+            {
+                <div class="alert alert-danger" role="alert">
+                    Coach already exists for the current user.
+                </div>
+            }
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

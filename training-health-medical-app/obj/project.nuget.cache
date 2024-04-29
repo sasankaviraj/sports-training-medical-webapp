@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E4euAy1789BPZZJe/gyBwg4kCpWgB5KCJsURT1zf/yosrgioqmOtbybcIhW7AXiC+npOcv7mZ+CJLdu5vD9l9A==",
+  "dgSpecHash": "S6bOBxqS6NaaB48GWwBgC8WwxZHYS4xMmRJLHLOyWnxIA0NNHPsPUJrs4Xwhl/cVzIZ3s72wnQGnX7q4Hn1Kbw==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\c#\\CAMPUS-PROJECTS\\training-health-medical-app\\training-health-medical-app.csproj",
+  "projectFilePath": "C:\\Projects\\c#\\sports-training-medical-webapp\\sports-training-medical-webapp\\training-health-medical-app\\training-health-medical-app.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

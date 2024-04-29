@@ -31,6 +31,12 @@
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
+            @if (Model.AthleteExists)
+            {
+                <div class="alert alert-danger" role="alert">
+                    Athlete already exists for the current user.
+                </div>
+            }
         </form>
     </div>
 </div>

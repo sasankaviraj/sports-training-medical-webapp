@@ -11141,11 +11141,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\c#\\CAMPUS-PROJECTS\\training-health-medical-app\\training-health-medical-app.csproj",
+      "projectUniqueName": "C:\\Projects\\c#\\sports-training-medical-webapp\\sports-training-medical-webapp\\training-health-medical-app\\training-health-medical-app.csproj",
       "projectName": "training-health-medical-app",
-      "projectPath": "C:\\Projects\\c#\\CAMPUS-PROJECTS\\training-health-medical-app\\training-health-medical-app.csproj",
+      "projectPath": "C:\\Projects\\c#\\sports-training-medical-webapp\\sports-training-medical-webapp\\training-health-medical-app\\training-health-medical-app.csproj",
       "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\c#\\CAMPUS-PROJECTS\\training-health-medical-app\\obj\\",
+      "outputPath": "C:\\Projects\\c#\\sports-training-medical-webapp\\sports-training-medical-webapp\\training-health-medical-app\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",

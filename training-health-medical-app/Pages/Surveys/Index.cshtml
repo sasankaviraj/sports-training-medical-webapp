@@ -1,0 +1,132 @@
+﻿@page
+@model training_health_medical_app.Pages.Surveys.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Survey Details</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<div>
+    <button onclick="exportToExcel()" class="btn btn-primary">Download Excel</button>
+    <button onclick="exportToPdf()" class="btn btn-primary">Download PDF</button>
+</div>
+
+<table id="surveyTable" class="table">
+    <thead>
+        <tr>
+            <th>
+                Mood
+            </th>
+            <th>
+                Appetite
+            </th>
+            <th>
+                Feelings
+            </th>
+            <th>
+                Interest
+            </th>
+            <th>
+                Sleep
+            </th>
+            <th>
+                Physical Symptom
+            </th>
+            <th>
+                Treatment
+            </th>
+            <th>
+                Diagnose
+            </th>
+            <th>
+                Athlete Name
+            </th>
+            <th>
+                Coach Name
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var surveyViewModel in Model.Surveys)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => surveyViewModel.Survey.Mood)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => surveyViewModel.Survey.Appetite)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => surveyViewModel.Survey.Feelings)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => surveyViewModel.Survey.Interest)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => surveyViewModel.Survey.Sleep)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => surveyViewModel.Survey.PhysicalSymptom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => surveyViewModel.Survey.Treatment)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => surveyViewModel.Survey.Diagnose)
+                </td>
+                <td>
+                    @surveyViewModel.AthleteName
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => surveyViewModel.CoachName)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.2/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
+
+<script>
+    function exportToExcel() {
+        const table = document.getElementById('surveyTable');
+        const wb = XLSX.utils.table_to_book(table, { sheet: "Sheet1" });
+        XLSX.writeFile(wb, 'survey_data.xlsx');
+    }
+
+    function exportToPdf() {
+        const table = document.getElementById('surveyTable');
+        const pdfDoc = pdfMake.createPdf({
+            content: [
+                {
+                    table: {
+                        headerRows: 1,
+                        body: getTableData(table)
+                    }
+                }
+            ]
+        });
+        pdfDoc.download('survey_data.pdf');
+    }
+
+    function getTableData(table) {
+        const data = [];
+        const rows = table.querySelectorAll('tr');
+        rows.forEach((row) => {
+            const rowData = [];
+            const cols = row.querySelectorAll('td, th');
+            cols.forEach((col) => {
+                rowData.push(col.innerText.trim());
+            });
+            data.push(rowData);
+        });
+        return data;
+    }
+</script>

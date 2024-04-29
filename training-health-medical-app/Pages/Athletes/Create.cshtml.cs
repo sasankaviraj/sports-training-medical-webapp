@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using training_health_medical_app.Data;
 using training_health_medical_app.Model;
 
@@ -15,7 +16,7 @@ namespace training_health_medical_app.Pages.Athletes
     {
         private readonly training_health_medical_app.Data.ApplicationDbContext _context;
         private readonly UserManager<IdentityUser> _userManager;  // Inject UserManager
-
+        public bool AthleteExists { get; private set; }
         public CreateModel(training_health_medical_app.Data.ApplicationDbContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
@@ -49,9 +50,17 @@ namespace training_health_medical_app.Pages.Athletes
 
             if (user != null)
             {
-                Athlete.UserID = user.Id;
-                _context.Athlete.Add(Athlete);
-                await _context.SaveChangesAsync();
+                var athlete = await _context.Athlete.FirstOrDefaultAsync(a => a.UserID == user.Id);
+                if (athlete == null) {
+                    Athlete.UserID = user.Id;
+                    _context.Athlete.Add(Athlete);
+                    await _context.SaveChangesAsync();
+                }
+                else
+                {
+                    AthleteExists = athlete != null;
+                    return Page();
+                }
             }
             else {
                 return RedirectToPage("/Account/Login", new { area = "Identity" });
