@@ -10,61 +10,86 @@
 
     <!-- Custom Header Styles -->
     <style>
+        /* Navbar Styles */
         .navbar {
-            background-color: #fff; /* Background color */
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+            background-color: #aad6ec; /* Blue background */
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+            border-bottom: 2px solid #0056b3; /* Darker blue border bottom */
         }
 
         .navbar-brand {
             font-weight: bold;
-            color: #333;
-            font-size: 1.5rem; /* Brand font size */
-            transition: color 0.3s ease; /* Smooth color transition */
+            color: #fff; /* White text */
+            font-size: 1.8rem;
+            transition: color 0.3s ease;
         }
 
         .navbar-brand:hover {
-            color: #007bff; /* Hover color */
+            color: #ffd700; /* Yellow on hover */
         }
 
-        .nav-item {
-            margin-right: 15px; /* Spacing between nav items */
+        .navbar-nav {
+            margin-left: auto; /* Align nav items to the right */
         }
 
         .nav-link {
-            color: #555;
-            transition: color 0.3s ease; /* Smooth color transition */
+            /*color: #fff; /* White text */*/
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
         .nav-link:hover {
-            color: #007bff; /* Hover color */
+            color: #ffd700; /* Yellow on hover */
         }
 
-        /* Login Partial Styles */
+        /* Login Button Styles */
         .login-btn {
-            background-color: #007bff;
-            color: #fff;
+            background-color: #ffd700; /* Yellow button */
+            color: #000; /* Black text */
             border: none;
             border-radius: 20px;
             padding: 8px 15px;
-            transition: background-color 0.3s ease; /* Smooth background color transition */
+            transition: background-color 0.3s ease;
         }
 
         .login-btn:hover {
-            background-color: #0056b3; /* Hover background color */
+            background-color: #ffc107; /* Darker yellow on hover */
+        }
+
+        /* Footer Styles */
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 60px; /* Margin bottom to accommodate footer height */
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 60px; /* Footer height */
+            line-height: 60px; /* Align text vertically */
+            background-color: #f8f9fa; /* Footer background color */
+            border-top: 1px solid #ddd; /* Top border for separation */
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-md navbar-light">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-page="/Index">The Netball Athletes' Training Management</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
                         </li>

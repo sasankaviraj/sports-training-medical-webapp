@@ -12,13 +12,21 @@
         background-attachment: fixed;
         background-position: center;
         font-family: 'Arial', sans-serif; /* Specify a font family */
+        margin: 0;
+        padding: 0;
+        height: 100vh;
     }
 
     .landing-content {
         background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
         color: #fff; /* Text color */
-        padding: 100px 0; /* Padding for content */
+        padding: 100px 20px; /* Padding for content */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .landing-content h1 {
@@ -42,9 +50,7 @@
     }
 </style>
 
-<div class="text-center">
-    <div class="landing-content">
-        <h1 class="display-4">Welcome</h1>
-        <p>The Netball Athletes' Training Management</p>
-    </div>
+<div class="landing-content">
+    <h1 class="display-4">Welcome</h1>
+    <p>The Netball Athletes' Training Management</p>
 </div>

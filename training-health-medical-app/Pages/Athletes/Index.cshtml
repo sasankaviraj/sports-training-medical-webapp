@@ -2,47 +2,43 @@
 @model training_health_medical_app.Pages.Athletes.IndexModel
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Athlete Details";
 }
 
-<h1>Athlete Details</h1>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Athlete Details</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Athlete[0].Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Athlete[0].Gender)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Athlete[0].Sport)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model.Athlete) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Sport)
-            </td>
-            <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="text-center mb-4">
+        <a asp-page="Create" class="btn btn-primary">Create New</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Gender</th>
+                    <th>Sport</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Athlete)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Gender</td>
+                        <td>@item.Sport</td>
+                        <td>
+                            <div class="btn-group" role="group" aria-label="Athlete Actions">
+                                <a asp-page="./Edit" asp-route-id="@item.ID" class="btn btn-sm btn-primary">Edit</a>
+                                <a asp-page="./Details" asp-route-id="@item.ID" class="btn btn-sm btn-info">Details</a>
+                                <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-sm btn-danger">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
